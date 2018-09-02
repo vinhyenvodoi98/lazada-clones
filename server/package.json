@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinhyenvodoi98/lazada-clones.git"
+  },
+  "author": "hoang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinhyenvodoi98/lazada-clones/issues"
+  },
+  "homepage": "https://github.com/vinhyenvodoi98/lazada-clones#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.12",
+    "morgan": "^1.9.0"
+  }
+}
