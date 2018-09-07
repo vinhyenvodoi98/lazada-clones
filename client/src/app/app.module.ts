@@ -8,10 +8,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+
+import { AppService } from './app.service';
+import { DataService } from './data.service';
+import { MessageComponent } from './message/message.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +28,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AppService,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
