@@ -24,7 +24,7 @@
             <a (click)="collapse()" routerLink="/categories" routerLinkActive="active" class="nav-link">Categories</a>
           </li>
           <li class="nav-item ml-0 ml-md-auto" ngbDropdown #dropdown="ngbDropdown">
-            <a href="" class="nav-link dropdown-toggle" ngbDropdownToggle>
+            <a class="nav-link dropdown-toggle" ngbDropdownToggle>
               <i class="fa fa-user mr-1"></i>
               <span *ngIf="token">Account</span>
             </a>
@@ -39,7 +39,7 @@
                 <i class="fa fa-user-key" aria-hidden="true"></i> Logout
               </a>
               <a *ngIf="!token" (click)="closeDropdown(dropdown);collapse()" routerLink="/register" class="dropdown-item">
-                <i class="fa fa-group" aria-hidden="true"></i> Login
+                <i class="fa fa-group" aria-hidden="true"></i> Register
               </a>
             </div>
           </li>

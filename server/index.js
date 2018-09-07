@@ -12,6 +12,12 @@ var mongoose = require('mongoose');
 var login= require('./API/login')
 
 //connect data
+
+//mlab data
+// mongoose.set('useFindAndModify', false)
+// mongoose.connect('mongodb://vinhpro1998:1998vinhpro@ds125362.mlab.com:25362/vinhnodb',{ useNewUrlParser: true });
+
+//mongodb local
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lazada',{
     useNewUrlParser: true,
 });

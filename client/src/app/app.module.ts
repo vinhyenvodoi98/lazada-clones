@@ -7,19 +7,25 @@ import { AppRoutingModule } from './/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { MessageComponent } from './message/message.component';
+import { LoginComponent } from './login/login.component';
 
 import { AppService } from './app.service';
 import { DataService } from './data.service';
-import { MessageComponent } from './message/message.component';
+import { AuthGuardService } from './auth-guard.service';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    MessageComponent
+    MessageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,7 @@ import { MessageComponent } from './message/message.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AppService,DataService],
+  providers: [AppService,DataService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
