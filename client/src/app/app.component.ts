@@ -3,10 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService} from './data.service';
 
-// export interface User{
-//   name: any;
-// }
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,9 +13,8 @@ export class AppComponent implements OnInit{
   isCollpased = true;
 
   constructor(private router: Router,
-              private data: DataService,
-              ){
-                this.data.getProfile();
+              private data: DataService){
+              this.data.getProfile();
               }
 
   ngOnInit(){
@@ -27,12 +22,12 @@ export class AppComponent implements OnInit{
     // console.log(name);
   }
   get token(){
-    
     return localStorage.getItem('token');
   }
 
   
   collapse(){
+    // console.log(this.data);
     this.isCollpased = true ;
   }
 

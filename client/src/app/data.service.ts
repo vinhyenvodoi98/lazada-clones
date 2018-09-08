@@ -39,7 +39,7 @@ export class DataService {
 
   async getProfile(){
     try{
-      if(localStorage.get('token')){
+      if(localStorage.getItem('token')){
         const data = await this.rest.get(
           'http://localhost:3000/api/profile'
         );
