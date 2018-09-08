@@ -3,6 +3,7 @@ var router = express.Router();
 var User = require('../models/user');
 var jwt = require ('jsonwebtoken');
 
+var checkJWT = require ('../middlewares/check-jwt');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -67,6 +68,7 @@ router.post('/login', (req,res,next)=>{
             },'supersecret123');
             res.json({
                 success: true,
+                user : user.name,
                 message: 'enjoy',
                 token:token
             })
@@ -74,6 +76,35 @@ router.post('/login', (req,res,next)=>{
     }
     })
 })
+
+router.route('/profile')
+    .get(checkJWT, (req,res,next)=>{
+        User.findOne({_id: req.decoded.user._id},(err,user)=>{
+            res.json({
+                success: true,
+                user: user,
+                message: "Success"
+            });
+        });
+    })
+
+    .post(checkJWT, (req,res,next)=>{
+        User.findOne({_id: req.decoded.user._id},(err,user)=>{
+            if(err) return next(err);
+
+            if(req.body.name) user.name = req.body.name;
+            if(req.body.email) user.email = req.body.email;
+            if(req.body.password) user.password = req.body.password;
+
+            user.isSeller = req.body.isSeller;
+
+            user.save();
+            res.json({
+                success: true,
+                message: 'tao thanh cong profile'
+            });
+        });
+    });
 
 
 module.exports = router;

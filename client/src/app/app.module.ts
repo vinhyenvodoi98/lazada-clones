@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { AppService } from './app.service';
 import { DataService } from './data.service';
 import { AuthGuardService } from './auth-guard.service';
+import { RestApiService } from './rest-api.service';
 
 
 
@@ -34,7 +35,7 @@ import { AuthGuardService } from './auth-guard.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AppService,DataService,AuthGuardService],
+  providers: [AppService,DataService,AuthGuardService,RestApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

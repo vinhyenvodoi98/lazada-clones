@@ -55,7 +55,7 @@ export class RegisterComponent implements OnInit {
     try{
       if(this.validate()){
         const data = await this.rest.post(
-          'http://localhost:3000/api/accounts/signup',
+          'http://localhost:3000/api/register',
           {
             name: this.name,
             email: this.email,
@@ -66,6 +66,7 @@ export class RegisterComponent implements OnInit {
         if(data['success']){
           localStorage.setItem('token', data['token']);
           this.data.success('Registration Successfull');
+          await this.data.getProfile();
         }else{
           this.data.error(data['message']);
         }
