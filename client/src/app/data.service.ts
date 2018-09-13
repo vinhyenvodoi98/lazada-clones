@@ -41,11 +41,19 @@ export class DataService {
     try{
       if(localStorage.getItem('token')){
         const data = await this.rest.get(
-          'http://localhost:3000/api/profile'
+          'http://localhost:3000/api/account/profile'
         );
         this.user = data['user'];
       }
     }catch (error){
+      this.error(error);
+    }
+  }
+
+  async getLazmall(){
+    try{
+    
+    }catch(error){
       this.error(error);
     }
   }

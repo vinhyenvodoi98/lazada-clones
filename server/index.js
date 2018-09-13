@@ -10,7 +10,7 @@ var app = express();
 var mongoose = require('mongoose');
 
 //api login
-var login= require('./API/login')
+var login= require('./API/login');
 
 //connect data
 
@@ -39,7 +39,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use('/api',login);
+app.use('/api/account',login);
 
 
 app.get('/',(req,res,next)=>{

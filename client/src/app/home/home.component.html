@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row" style="padding-left :30px; padding-right: 30px">
     <div class="col-2" style="padding: 0; height: 100%;">
       <div class="list-group">
@@ -44,57 +44,12 @@
   <div class="lazmall">
     <h3>LazMall</h3>
     <div class="row" >
-      <div class="col-2" >
-        <div class="card" style="width: 11rem;" >
-          <img class="card-img-top" src="../../assets/lazmall.jpg" alt="Card image cap">
+      <div class="col-2" *ngFor="let Laz of Lazs ">
+        <div class="card" style="height: 100%;" >
+          <img class="card-img-top" src="{{Laz.avatar}}" alt="Card image cap">
           <div class="card-body" style="text-align: center">
-            <h5 class="card-title">Toshiba</h5>
-            <p class="card-text disabled"  >Leading Innovation</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-2" >
-        <div class="card" style="width: 11rem;" >
-          <img class="card-img-top" src="../../assets/lazmall.jpg" alt="Card image cap">
-          <div class="card-body" style="text-align: center">
-            <h5 class="card-title">Toshiba</h5>
-            <p class="card-text disabled"  >Leading Innovation</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-2" >
-        <div class="card" style="width: 11rem;" >
-          <img class="card-img-top" src="../../assets/lazmall.jpg" alt="Card image cap">
-          <div class="card-body" style="text-align: center">
-            <h5 class="card-title">Toshiba</h5>
-            <p class="card-text disabled"  >Leading Innovation</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-2" >
-        <div class="card" style="width: 11rem;" >
-          <img class="card-img-top" src="../../assets/lazmall.jpg" alt="Card image cap">
-          <div class="card-body" style="text-align: center">
-            <h5 class="card-title">Toshiba</h5>
-            <p class="card-text disabled"  >Leading Innovation</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-2" >
-        <div class="card" style="width: 11rem;" >
-          <img class="card-img-top" src="../../assets/lazmall.jpg" alt="Card image cap">
-          <div class="card-body" style="text-align: center">
-            <h5 class="card-title">Toshiba</h5>
-            <p class="card-text disabled"  >Leading Innovation</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-2" >
-        <div class="card" style="width: 11rem;" >
-          <img class="card-img-top" src="../../assets/lazmall.jpg" alt="Card image cap">
-          <div class="card-body" style="text-align: center">
-            <h5 class="card-title">Toshiba</h5>
-            <p class="card-text disabled"  >Leading Innovation</p>
+            <h5 class="card-title">{{Laz.title}}</h5>
+            <p class="card-text disabled" >{{Laz.text}}</p>
           </div>
         </div>
       </div>
