@@ -1,12 +1,43 @@
-a{
+/* a{
     font-size: 15px;
     padding-top: 11px;
     padding-bottom: 11px;
     border-top: 0;
+} */
+
+.list-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.lazmall{
+.lazmall-container{
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 30px;
+}
+
+.row-just-for-you{
+    padding-top: 20px;
+}
+
+.img{
+    text-align: center;
+}
+
+.Categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Lazmall{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.backgroup{
+    background-color : #f5f5f5; 
 }

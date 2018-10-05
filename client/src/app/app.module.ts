@@ -17,6 +17,7 @@ import { AppService } from './app.service';
 import { DataService } from './data.service';
 import { AuthGuardService } from './auth-guard.service';
 import { RestApiService } from './rest-api.service';
+import { LazMallComponent } from './mailmaz/laz-mall/laz-mall.component';
 
 
 
@@ -26,7 +27,8 @@ import { RestApiService } from './rest-api.service';
     HomeComponent,
     RegisterComponent,
     MessageComponent,
-    LoginComponent
+    LoginComponent,
+    LazMallComponent
   ],
   imports: [
     BrowserModule,

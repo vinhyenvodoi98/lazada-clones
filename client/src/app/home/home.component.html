@@ -1,58 +1,114 @@
-<div class="container">
-  <div class="row" style="padding-left :30px; padding-right: 30px">
-    <div class="col-2" style="padding: 0; height: 100%;">
-      <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">Electronic Devices</a>
-        <a href="#" class="list-group-item list-group-item-action">Electronic Accessories</a>
-        <a href="#" class="list-group-item list-group-item-action">TV & Home Appliances</a>
-        <a href="#" class="list-group-item list-group-item-action">Health & Beauty</a>
-        <a href="#" class="list-group-item list-group-item-action">Babies & Toys</a>
-        <a href="#" class="list-group-item list-group-item-action">Groceries & Pets</a>
-        <a href="#" class="list-group-item list-group-item-action">Women's Fashion</a>
-        <a href="#" class="list-group-item list-group-item-action">Sports & Travel</a>
-      </div>
-    </div>
-    <div class="col-10" style="padding: 0">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="../../assets/anh1.jpg" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="../../assets/anh2.jpg" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="../../assets/anh3.jpg" alt="Third slide">
-          </div>
+<div class="backgroup">
+  <div class="container">
+    <div class="row" style="padding-left :30px; padding-right: 30px">
+      <div class="col-2" style="padding: 0">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">Electronic Devices</a>
+          <a href="#" class="list-group-item list-group-item-action">Electronic Accessories</a>
+          <a href="#" class="list-group-item list-group-item-action">TV & Home Appliances</a>
+          <a href="#" class="list-group-item list-group-item-action">Health & Beauty</a>
+          <a href="#" class="list-group-item list-group-item-action">Babies & Toys</a>
+          <a href="#" class="list-group-item list-group-item-action">Groceries & Pets</a>
+          <a href="#" class="list-group-item list-group-item-action">Women's Fashion</a>
+          <a href="#" class="list-group-item list-group-item-action">Sports & Travel</a>
         </div>
-        <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-    </div>
-  </div> 
-  <div class="lazmall">
-    <h3>LazMall</h3>
-    <div class="row" >
-      <div class="col-2" *ngFor="let Laz of Lazs ">
-        <div class="card" style="height: 100%;" >
-          <img class="card-img-top" src="{{Laz.avatar}}" alt="Card image cap">
-          <div class="card-body" style="text-align: center">
-            <h5 class="card-title">{{Laz.title}}</h5>
-            <p class="card-text disabled" >{{Laz.text}}</p>
+      <div class="col-10" style="padding: 0">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="../../assets/anh1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="../../assets/anh2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="../../assets/anh3.jpg" alt="Third slide">
+            </div>
           </div>
+          <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
-  </div>
+    <!-- Lazmall -->
+    <div class="lazmall-container">
+      <h3>LazMall</h3>
+      <div class="Lazmall">
+        <div *ngFor="let Laz of Lazs">
+          <div class="card"style="height: 100%; width: 175px;" >
+            <img class="card-img-top" src="{{Laz.avatar}}" alt="Card image cap">
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">{{Laz.title}}</h5>
+              <p class="card-text disabled" >{{Laz.text}}</p>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+    <!-- Categories -->
+    <div class="lazmall-container">
+      <h3>Categories</h3>
+      <div class="Categories">
+        <div *ngFor="let Categorie of Categories ">
+          <div class="card" style="width: 154px;height: 154px;" >
+            <div class="img">
+              <img style="width: 80px ; height: 80px ;" src="{{Categorie.avatar}}">
+            </div>          
+            <div class="" style="text-align: center">
+              <p class="">{{Categorie.title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Just For You -->
+    <div class="lazmall-container">
+      <h3>Just for you</h3>
+      <div class="row row-just-for-you">
+        <div class="col-2" *ngFor="let Laz of Lazs ">
+          <div class="card" style="height: 100%;" >
+            <img class="card-img-top" src="{{Laz.avatar}}" alt="Card image cap">
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">{{Laz.title}}</h5>
+              <p class="card-text disabled" >{{Laz.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-just-for-you">
+        <div class="col-2" *ngFor="let Laz of Lazs ">
+          <div class="card" style="height: 100%;" >
+            <img class="card-img-top" src="{{Laz.avatar}}" alt="Card image cap">
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">{{Laz.title}}</h5>
+              <p class="card-text disabled" >{{Laz.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-just-for-you">
+        <div class="col-2" *ngFor="let Laz of Lazs ">
+          <div class="card" style="height: 100%;" >
+            <img class="card-img-top" src="{{Laz.avatar}}" alt="Card image cap">
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">{{Laz.title}}</h5>
+              <p class="card-text disabled" >{{Laz.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>     
 </div>
