@@ -17,8 +17,6 @@ import { AppService } from './app.service';
 import { DataService } from './data.service';
 import { AuthGuardService } from './auth-guard.service';
 import { RestApiService } from './rest-api.service';
-import { LazMallComponent } from './mailmaz/laz-mall/laz-mall.component';
-
 
 
 @NgModule({
@@ -27,8 +25,7 @@ import { LazMallComponent } from './mailmaz/laz-mall/laz-mall.component';
     HomeComponent,
     RegisterComponent,
     MessageComponent,
-    LoginComponent,
-    LazMallComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

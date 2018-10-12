@@ -9,7 +9,7 @@ import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes=[
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   },
   {
@@ -23,9 +23,14 @@ const routes: Routes=[
     canActivate: [AuthGuardService]
   },
   {
+    path: 'shop',
+    loadChildren: './mailmaz/lazmall.module#LazmallModule'
+  },
+  {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'home'
   }
+  
 ]
  
 @NgModule({

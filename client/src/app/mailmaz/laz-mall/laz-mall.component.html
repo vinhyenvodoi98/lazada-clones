@@ -1,3 +1,67 @@
-<p>
-  laz-mall works!
-</p>
+<div class="backgroud">
+  <div class="container">
+    <img style="width: 100%" src="https://vn-test-11.slatic.net/shop/91f3c007de8e4c3e662d2c4987429e5b.jpeg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-padding" >
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link active" href="#">Homepage</a>              
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link unactive" href="#">All products</a>
+          </li>
+        </ul>
+      </div>      
+    </nav>
+    <img style="width: 100%" src="https://vn-test-11.slatic.net/shop/91f3c007de8e4c3e662d2c4987429e5b.jpeg">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-6" style="padding-left: 0px;">
+          <img class="advertising" src="https://vn-test-11.slatic.net/shop/734943ef4a80b336629b1315d51895ec.jpeg">
+        </div>
+        <div class="col-3" style="padding: 0px">
+          <img class="advertising" src="https://vn-test-11.slatic.net/shop/0391a44f414aa83e7f2f70331f780fd5.jpeg">
+        </div>
+        <div class="col-3" style="padding-right: 0px">
+          <img class="advertising" src="https://vn-test-11.slatic.net/shop/3d5a1bdef3d8f4aa300d6f431fdeed22.jpeg">
+        </div>
+      </div>
+      <div class="row" style="padding-top:15px">
+        <div class="col-3" style="padding-left: 0px;">
+          <img class="advertising-1" src="https://vn-test-11.slatic.net/shop/58b5999ee1aafd32c5874e7737de7659.jpeg">
+        </div>
+        <div class="col-3" style="padding-left: 0px;">
+          <img class="advertising-1" src="https://vn-test-11.slatic.net/shop/7b527d2ed7fe8f2bd02d464b77a630fb.jpeg">
+        </div>
+        <div class="col-3" style="padding: 0px;">
+          <img class="advertising-1" src="https://vn-test-11.slatic.net/shop/4537b14135ac59a7d46b9869036dce89.jpeg">
+        </div>
+        <div class="col-3" style="padding-right: 0px;">
+          <img class="advertising-1" src="https://vn-test-11.slatic.net/shop/528ef42cf57a4694b6c1c34f3c852f6f.jpeg">
+        </div>
+      </div>
+    </div>
+    <div class="card-padding">
+      <div *ngFor="let Laz of Lazs">
+        <div class="card card-shadow" (click)="on_Lazmall(Laz.id)" style="height: 100%; width: 175px;" >
+          <img class="card-img-top" src="{{Laz.avatar}}" alt="Card image cap">
+          <div class="card-body" style="text-align: center">
+            <h5 class="card-title">{{Laz.title}}</h5>
+            <p class="card-text disabled" >{{Laz.text}}</p>
+          </div>
+        </div> 
+      </div>
+    </div>    
+    <div class="card-padding">
+      <div *ngFor="let Laz of Lazs">
+        <div class="card card-shadow" (click)="on_Lazmall(Laz.id)" style="height: 100%; width: 175px;" >
+          <img class="card-img-top" src="{{Laz.avatar}}" alt="Card image cap">
+          <div class="card-body" style="text-align: center">
+            <h5 class="card-title">{{Laz.title}}</h5>
+            <p class="card-text disabled" >{{Laz.text}}</p>
+          </div>
+        </div> 
+      </div>
+    </div>    
+  </div>
+</div>

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { DataService } from '../data.service';
 
 export interface LazMall{
+  id : Number;
   avatar : String;
   title : String;
   text : String;
@@ -22,31 +24,37 @@ export class HomeComponent implements OnInit {
 
   Lazs : LazMall[]=[
     {
+      id: 1,
       avatar: '../../assets/lazmall.jpg',
       title: 'Toshiba',
       text: 'Leading Innovation',
     },
     {
+      id : 2,
       avatar: '../../assets/lazmall.jpg',
       title: 'Sharp',
       text: 'Be Original',
     },
     {
+      id : 3,
       avatar: '../../assets/lazmall.jpg',
       title: 'Innisfree',
       text: 'Natural benefits',
     },
     {
+      id : 4,
       avatar: '../../assets/lazmall.jpg',
       title: 'Bose',
       text: 'Better Sound',
     },
     {
+      id : 5,
       avatar: '../../assets/lazmall.jpg',
       title: 'Bitis',
       text: 'Official Store',
     },
     {
+      id : 6,
       avatar: '../../assets/lazmall.jpg',
       title: 'MamyPoko',
       text: 'cửa hàng chính hãng',
@@ -112,11 +120,16 @@ export class HomeComponent implements OnInit {
     },
   ]
 
-  constructor(private data :DataService) { }
+  constructor(private data :DataService,
+              private router:Router) { }
   
   ngOnInit() {
     this.getLazMall();
     console.log(this.Lazs);
+  }
+
+  on_Lazmall(id){
+    this.router.navigate(['shop/:'+id]);
   }
 
   getLazMall(){
